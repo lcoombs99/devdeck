@@ -1,0 +1,14 @@
+.bookmarkList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    padding: 0;
+    margin: 1.5rem 0;
+    list-style: none;
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 2rem;
+    color: lightcoral;
+}

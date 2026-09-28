@@ -1,7 +1,7 @@
 import { useState } from 'react';
-// Importing components
 import BookmarkList from './components/BookmarkList';
 import BookmarkInput from './components/BookmarkInput.jsx';
+import './App.css'
 
 const INITIAL_BOOKMARKS = [
   { id: 'b1', title: 'React Documentation', url: 'https://react.dev', category: 'Documentation', isFavorite: true },

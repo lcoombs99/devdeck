@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AddButton from './AddButton.jsx';
 
 const BookmarkInput = props => {
   const [title, setTitle] = useState('');
@@ -7,8 +8,8 @@ const BookmarkInput = props => {
   const [isValid, setIsValid] = useState(true);
 
   const submitHandler = event => {
-    // Missing e.preventDefault() here!
     event.preventDefault();
+
     if (title.trim().length === 0 || url.trim().length === 0) {
       setIsValid(false);
       return;
@@ -62,7 +63,9 @@ const BookmarkInput = props => {
 
       {!isValid && <p>Please fill out both the Title and URL fields.</p>}
 
-      <button type="submit">Add Bookmark</button>
+      <AddButton type="submit">
+        Add Bookmark
+      </AddButton>
     </form>
   );
 };

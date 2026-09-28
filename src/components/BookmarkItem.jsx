@@ -1,8 +1,9 @@
 const BookmarkItem = props => {
-  console.log(props.title, props.isFavorite);
-  // TODO: FIXED onToggleFavorite name
+
   return (
-    <li>
+    <li style={{
+      borderLeft: props.isFavorite ? '5px solid goldenrod' : '5px solid transparent'
+    }}>
       <div>
         <h3>{props.title}</h3>
         <span>{props.category}</span>
@@ -15,7 +16,10 @@ const BookmarkItem = props => {
       </p>
 
       <div>
-        <button onClick={() => props.onToggleFavorite(props.id)}>
+        <button
+          className={`favorite-button ${props.isFavorite ? 'active' : ''}`}
+          onClick={() => props.onToggleFavorite(props.id)}
+        >
           {props.isFavorite ? '★ Favorited' : '☆ Favorite'}
         </button>
         <button onClick={() => props.onDelete(props.id)}>
